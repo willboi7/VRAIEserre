@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôle de la Serre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Contrôle de la Serre 🌱</h1>
+
+        <label>🌡️ Température (<span id="tempValue">20</span>°C)</label>
+        <input type="range" id="temperature" min="0" max="40" value="20" oninput="updateValue('tempValue', this.value)">
+
+        <label>💧 Humidité (<span id="humidityValue">50</span>%)</label>
+        <input type="range" id="humidity" min="0" max="100" value="50" oninput="updateValue('humidityValue', this.value)">
+
+        <label>☀️ Luminosité (<span id="lightValue">70</span>%)</label>
+        <input type="range" id="light" min="0" max="100" value="70" oninput="updateValue('lightValue', this.value)">
+
+        <button onclick="applySettings()">✅ Appliquer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
